@@ -86,15 +86,94 @@ $(document).ready(function () {
   })
   
   $("div.row label").click(function(){
-    $(this).siblings().toggle();
-    console.log(this.children);
+//    $(this).siblings().toggle();
+    var inputToToggle =$(this).siblings("input, textarea")
     var child = this.children[0];
-    if(child.innerHTML === "Pokaż"){
-      child.innerHTML = "Ukryj"
+    if (inputToToggle.hasClass("active")){
+      console.log("was active");
+      inputToToggle.removeClass("active");
+      inputToToggle.hide()
+      child.innerHTML = "Pokaż"
     }
     else{
-      child.innerHTML = "Pokaż"
+      inputToToggle.addClass("active");
+      inputToToggle.show();
+      child.innerHTML = "Ukryj"
+    }
+  })
+  
+  $("#showAllButton").click(function (e) {
+    e.preventDefault();
+
+    var pola = $(this).parents("form").find("input, textarea");
+    //console.log(pola);
+    for (var j = 0; j < pola.length; j++) {
+      let i = pola[j];
+      let spanToChange = $(i).parent().find("span")[0];
+      //console.log(spanToChange);
+      //console.log("j= ", j, i);
+      if (this.innerHTML === "Pokaż wszystko") {
+        //console.log(i, $(i));
+
+        if (!$(i).hasClass("active")) {
+          $(i).show();
+          $(i).addClass("active");
+          spanToChange.innerHTML = "Ukryj";
+        }
+      } else {
+        if ($(i).hasClass("active")) {
+          $(i).hide();
+          $(i).removeClass("active");
+          spanToChange.innerHTML = "Pokaż";
+        }
+      }
+    }
+
+    if (this.innerHTML === "Pokaż wszystko") {
+      this.innerHTML = "Ukryj wszystko";
+    } else {
+      this.innerHTML = "Pokaż wszystko";
+    }
+
+  })
+  
+  $(document).on("submit", "form.contactForm", function(e){
+    
+    e.preventDefault();
+    
+    var message = '';
+    var error = false;
+
+    var fields = $(this).find('input, textarea, select').not('[type="submit"]');
+    fields.removeClass('error valid');
+    
+    fields.each(function(){
+      let actualValue = $(this).val();
+      
+      if ($(this).nodeName === "INPUT" && actualValue.length < 4) {
+        $(this).addClass("error");
+        error = true;
+        message+= $(this).attr('placeholder') + '\n'
+      }
+      else if ($(this).nodeName === "TEXTAREA" && actualValue.length < 20){
+        $(this).addClass("error");
+        error = true;
+        message+= $(this).attr('placeholder') + "Treść powinna być większa niż 20 znaków." + '\n'
+      }
+      else{
+        $(this).addClass("valid");
+      }
+      
+    });
+    
+    if(error){
+      alert("Błąd\ntrzeba poprawic pola:\n" + message);
+    }
+    else{
+      $(document).unbind("submit");
+      $(this).submit();
     }
     
   })
+  
 });

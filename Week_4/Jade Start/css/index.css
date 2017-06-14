@@ -298,3 +298,28 @@ textarea:focus {
 .contactForm .row textarea{
   display: none;
 }
+
+#showAllButton{
+  display: block;
+  float: right;
+  width: 25%;
+  padding: 10px;
+  background: white;
+  font-weight: 700;
+  color: #555;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  border: 1px solid black;
+  margin-bottom: 10px;
+}
+
+input.error, textarea.error {
+  color: #FF0000;
+  border: 1px solid red;
+}
+
+input.valid, textarea.valid {
+  color: forestgreen;
+  border: 1px solid forestgreen;
+}
