@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css?family=Rokkitt');
+* {
+    font-family: "Rokkit", serif;
+}
+.container {
+    width:1200px;
+    margin: 0 auto;
+    padding:25px;
+    box-sizing: border-box;       
+}
+.menu {
+    clear: both;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid black;
+    font-size: 2.5vw;
+}
+.img-container {
+    height: 300px;
+    background-image: url(http://fillmurray.com/1150/300);
+}
+.img-main-news {
+    float: left;
+    margin-right: 10px;
+}
+.content-container {
+    background-color: aliceblue;
+    font-size: 2vh;
+    
+}
+.right-box {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 20%;
+    float: left;
+    padding-top: 10px;
+}
+.right-box-top{
+    min-height: 200px;
+    margin: 20px 10px;
+    text-align: justify; 
+}
+.right-box-bottom{
+    min-height: 200px;
+    margin: 20px 10px;
+    text-align: justify;
+}
+.left-box {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: justify;
+    text-indent: 20px;
+    width: 80%;
+    float: right;
+}
+.footer {
+    clear:both;
+    padding: 20px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+.clear {
+    clear:both;
+}
+.youtube-video {
+    min-width:640px;
+    min-height:480px;
+    margin:0 auto;
+}
+
+
+/* MOBILE SITE */
+
+
+
+@media(max-width:1200px){
+    .container {
+    width:400px;
+    margin: 0 auto;
+    padding:25px;
+    box-sizing: border-box;       
+}
+.menu {
+    clear: both;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 20px;
+    border: 1px solid black;
+    font-size: 2.5vh;
+    letter-spacing: 0.75em
+}
+.img-container {
+    display: none;
+    height: 300px;
+    background-image: url(http://fillmurray.com/1150/300);
+}
+.img-main-news {
+    float: left;
+    margin-right: 10px;
+    width:50%;
+}
+.content-container {
+    background-color: aliceblue;
+    font-size: 2vh;
+    
+}
+.right-box {
+    display:none;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 20%;
+    float: left;
+    padding-top: 10px;
+}
+.right-box-top{
+    min-height: 200px;
+    margin: 20px 10px;
+    text-align: justify; 
+}
+.right-box-bottom{
+    min-height: 200px;
+    margin: 20px 10px;
+    text-align: justify;
+}
+.left-box {
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+    text-align: justify;
+    text-indent: 20px;
+    width: auto;
+    float: right;
+}
+.footer {
+    clear:both;
+    padding: 20px;
+    height: 100px;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+}

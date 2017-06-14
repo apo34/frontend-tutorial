@@ -1,0 +1,5 @@
+mixin formRow(label, type, id)
+  .row
+    label(for=id)=label
+      span Pokaż
+    input(id=id, type=type, class="text", placeholder=label)

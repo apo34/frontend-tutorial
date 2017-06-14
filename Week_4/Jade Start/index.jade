@@ -1,0 +1,102 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    title Let's go!
+    link(href='css/cssreset.css', rel='stylesheet', type='text/css')
+    link(href='css/index.css', rel='stylesheet', type='text/css')
+    script(src='js/jquery-3.2.1.js')
+    script(src='js/tools.js')
+    script(src='js/script.js')
+    
+    include mixins
+  body
+    .header.container
+      .wrapperSize
+        h1 Epic Header!
+        img.logo(src='img/sidebar-activestate-branding-graphic_0.png')
+        .logo
+          a(title='click me')
+            img(src='http://www.placecage.com/400/160')
+    .content.container
+      .wrapper
+        .menu
+          ul
+            li
+              a(href='http://google.pl') Link 1
+            li
+              a(href='http://google.pl') Link 2
+              ul
+                li
+                  a(href='http://google.pl') Link 2.1
+                li
+                  a(href='http://google.pl') Link 2.2
+                li
+                  a(href='http://google.pl') Link 2.3
+                li
+                  a(href='http://google.pl') Link 2.4
+            li
+              a(href='http://google.pl') Link 3
+            li
+              a(href='http://google.pl') Link 4
+              ul
+                li
+                  a(href='http://google.pl') Link 4.1
+                li
+                  a(href='http://google.pl') Link 4.2
+                li
+                  a(href='http://google.pl') Link 4.3
+                li
+                  a(href='http://google.pl') Link 4.4
+            li
+              a(href='http://google.pl') Link 5
+        h1 Table Creator!
+        .forms
+          form(method='post', action='index.html')
+            h2 Table one
+            label(for='tab1picker') First table length: 
+            input#tab1picker(type='number', name='tab1picker', min='1', max='100', value='25')
+        .forms
+          h2 Table two
+          label(for='tab2picker') Second table length: 
+          input#tab2picker(type='number', name='tab2picker', min='1', max='100', value='25')
+          br
+          input#tabsubmit(type='button', title='bang!', name='tabsubmit', value='Submit numbers')
+        .workArea
+        .tabsContainer
+          ul.tabs
+            li.active
+              a(data-rel='tab1') tab 1
+            li
+              a(data-rel='tab2') tab 2
+            li
+              a(data-rel='tab3') tab 3
+            li
+              a(data-rel='tab4') tab 4
+            li
+              a(data-rel='tab5') tab 5
+          .tab.active(data-rel='tab1') Zawartosc 1
+            form.contactForm
+                  +formRow("Imię", "text", "formName")
+                  +formRow("Nazwisko", "text", "formSurname")
+                  +formRow("Email", "email", "formEmail")
+                  +formRow("Temat", "text", "formSubject")
+                  .row
+                    label(for="formText") Tekst
+                      span Pokaż
+                    textarea(id="formText" placeholder="Tekst")
+                    
+            
+            
+          .tab(data-rel='tab2') Zawartosc 2
+          .tab(data-rel='tab3') Zawartosc 3
+          .tab(data-rel='tab4') Zawartosc 4
+          .tab(data-rel='tab5') Zawartosc 5
+    .footer.container
+      h1 Epic footer!
+    .slider
+      .sliderBar
+        .verticalText 
+          h4 Some content
+      .sliderContent
+    #imageContainer

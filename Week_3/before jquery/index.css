@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #5F576B;
+  float: left;
+}
+
+.header {
+  display: flex;
+  height: 160px;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer {
+  height: 160px;
+  padding: 25px;
+}
+
+.content {
+  background-color: #80787F;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80%;
+  height: 100%;
+  background-color: #FFE8CC;
+  min-height: 750px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.container h1 {
+  color: floralwhite;
+  font-weight: 900;
+  font-size: 50px;
+  margin: 25px 10px;
+}
+
+.wrapper>h1 {
+  color: black;
+  font-weight: 700;
+  font-size: 35px;
+  margin: 10px 0;
+}
+
+input[type="button"] {
+  width: 20%;
+  height: 35px;
+  background-color: #AF9E98;
+  box-shadow: none;
+  color: floralwhite;
+  font-weight: 900;
+}
+
+.slider {
+  position: fixed;
+  right: 0;
+  top: 160px;
+  min-height: 300px;
+  min-width: 30px;
+  border: 1px solid black;
+}
+
+.sliderBar {
+  min-height: inherit;
+  float: left;
+  width: 30px;
+  background-color: beige;
+}
+
+.sliderContent {
+  display: none;
+  float: left;
+  width: 150px;
+  background-color: beige;
+  min-height: inherit;
+  background-image: url("http://www.placecage.com/g/200/300");
+}
+
+.verticalText {
+  transform: rotate(-90deg);
+  transform-origin: left top 0;
+}
+
+.tabsContainer {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid black;
+  width: 100%;
+  float: left;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.tabsContainer ul.tabs {
+  list-style: none;
+  width: 100%;
+  display: table;
+  height: 30px;
+  box-sizing: border-box;
+}
+
+.tabsContainer ul.tabs li {
+  display: table-cell;
+  height: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.tabsContainer ul.tabs li.active {
+  background: #ccc;
+  
+}
+
+.tabsContainer ul.tabs li.active a {
+  color: white;
+}
+
+.tabsContainer ul.tabs li a {
+  display: block;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+
+/*
+Mickey Mouse  #5F576B
+corner        #80787F
+              #AF9E98
+do white      #DFC6B2
+naboo2        #FFE8CC
+
+
+
+*/
+
+.tab {
+  display: none;
+  min-height: 200px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid black;
+  margin-top: 10px;
+  padding: 10px;
+  background-image: url(http://www.placecage.com/c/750/350);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+div.active {
+  margin-top: 10px;
+  display: block;
+}
+
+div.tab.active {
+  display: block;
+}
+
+img.logo {
+  height: 160px;
+}
+
+header div.menu {
+  clear: both;
+  
+}
+
+.wrapperSize {
+  width: 80%;
+  display: flex;
+  align-content:space-between;
+  justify-content: space-between;
+}
+
+div.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+div.menu ul li {
+  display: block;
+  background-color: rgba(175, 158, 152, 0.5);
+  box-sizing: border-box;
+}
+
+#imageContainer{
+  position:fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 50%;
+  background-image: url(sidebar-activestate-branding-graphic_0.png);
+  display: none;
+}

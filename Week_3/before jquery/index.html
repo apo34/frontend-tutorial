@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Let's go!</title>
+  <link href="cssreset.css" rel="stylesheet" type="text/css" />
+  <link href="index.css" rel="stylesheet" type="text/css" />
+  <script src="jquery-3.2.1.js"></script>
+  <script src="tools.js"></script>
+  <script src="script.js"></script>
+
+</head>
+
+<body>
+
+  <div class="header container">
+    <div class="wrapperSize">
+      <h1>Epic Header!</h1>
+      <img class="logo" src="sidebar-activestate-branding-graphic_0.png"/>
+      <div class="logo">
+        <a  title="click me">
+          <img src="http://www.placecage.com/400/160" />
+        </a>
+      </div>
+    </div>
+
+  </div>
+  <div class="content container">
+    <div class="wrapper">
+      <div class="menu">
+      <ul>
+        <li><a href="http://google.pl">Link 1</a></li>
+        <li><a href="http://google.pl">Link 2</a>
+          <ul>
+            <li><a href="http://google.pl">Link 2.1</a></li>
+            <li><a href="http://google.pl">Link 2.2</a></li>
+            <li><a href="http://google.pl">Link 2.3</a></li>
+            <li><a href="http://google.pl">Link 2.4</a></li>
+          </ul>
+        </li>
+        <li><a href="http://google.pl">Link 3</a></li>
+        <li><a href="http://google.pl">Link 4</a>
+          <ul>
+            <li><a href="http://google.pl">Link 4.1</a></li>
+            <li><a href="http://google.pl">Link 4.2</a></li>
+            <li><a href="http://google.pl">Link 4.3</a></li>
+            <li><a href="http://google.pl">Link 4.4</a></li>
+          </ul>
+
+        </li>
+        <li><a href="http://google.pl">Link 5</a></li>
+      </ul>
+
+    </div>
+      
+      <h1>Table Creator!</h1>
+      <div class="forms">
+        <form method="post" action="index.html">
+          <h2>Table one</h2>
+          <label for="tab1picker">First table length: </label>
+          <input type="number" name="tab1picker" min="1" max="100" value="25" id="tab1picker" />
+        </form>
+      </div>
+      <div class="forms">
+        <h2>Table two</h2>
+        <label for="tab2picker">Second table length: </label>
+        <input type="number" name="tab2picker" min="1" max="100" value="25" id="tab2picker" />
+        <br/>
+        <input type="button" title="bang!" name="tabsubmit" id="tabsubmit" value="Submit numbers">
+      </div>
+      <div class="workArea">
+      </div>
+      <div class="tabsContainer">
+        <ul class="tabs">
+          <li class="active"><a data-rel="tab1">tab 1</a></li>
+          <li><a data-rel="tab2">tab 2</a></li>
+          <li><a data-rel="tab3">tab 3</a></li>
+          <li><a data-rel="tab4">tab 4</a></li>
+          <li><a data-rel="tab5">tab 5</a></li>
+        </ul>
+
+        <div data-rel="tab1" class="tab active">Zawartosc 1</div>
+        <div data-rel="tab2" class="tab">Zawartosc 2</div>
+        <div data-rel="tab3" class="tab">Zawartosc 3</div>
+        <div data-rel="tab4" class="tab">Zawartosc 4</div>
+        <div data-rel="tab5" class="tab">Zawartosc 5</div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <div class="footer container">
+    <h1>Epic footer!</h1>
+  </div>
+
+  <div class="slider">
+    <div class="sliderBar">
+      <div class="vetricalText">Some content</div>
+    </div>
+    <div class="sliderContent">
+
+
+    </div>
+  </div>
+  <div id="imageContainer">
+  
+  
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@keyframes imgfilter {
+    0%   {filter: none}
+    25%  {filter: invert(1)}
+    50%  {filter: hue-rotate(180deg)}
+    75%  {filter: brightness(100%)}
+    100% {filter: none}
+}
+
+* {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+code{
+    font-family: monospace;
+}
+.naglowek{
+  margin:0 auto;
+  color:ivory;
+    font-size: 5vw;
+    font-weight:300;
+    text-transform:uppercase;
+    letter-spacing: 0.75vh;
+}
+.header{
+    height:12.5vw;
+    background-color: darkslateblue;
+    top: 0px;
+    z-index: 1;
+}
+.menu-floater{
+    width:calc(15% - 40px);
+    padding: 20px;
+    height: 100px;
+    position: fixed;
+    bottom: 0px;
+    left:12.5%;
+    background-color: beige;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.menu{
+float:left;
+background-color:green;
+width: 20%;
+    max-width: 20%;
+min-height:300px;
+}
+.menu:hover{
+background-color:greenyellow;
+}
+.menu-content{
+    width:70%;
+    margin: auto;
+    text-align: center;
+}
+
+.content{
+float:right;
+width:calc(80% - 20px);
+background-color:lightgrey;
+    text-indent: 5%;
+    text-align: justify;
+    padding: 10px;
+    box-sizing: 
+}
+p::first-letter{
+    color: darkred;
+    font-size: 50px;
+}
+
+.footer{
+min-height:100px;
+background-color:darksalmon;
+clear:both;
+
+}
+
+html{
+  background-color:floralwhite;
+}
+.container{
+  width:75%;
+  margin:0 auto;
+  padding:0 2em 4em;
+  background-color: ivory;
+}
+
+.onion-clip{
+  width:40%;
+  float:right;
+    animation-name: imgfilter;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+.onion-clip:hover{
+    filter: invert(100%);
+}
+
+
+.body-class>.naglowek{
+  font-size:150px;
+}
+
+.clear{
+  clear:both;
+}
+li {
+    list-style-position: inside;
+    padding: -10px;
+}

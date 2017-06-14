@@ -1,0 +1,22 @@
+doctype html
+html
+  head 
+    title bang
+    meta(charset="utf-8")
+  body
+    header.head
+    .content
+      .section1
+        ul
+          each val in [1, 2, 3, 4, 5]
+            li(list-item=val)= "List " + val
+      .section2
+        include testing
+      .section3
+        p.
+          bash
+          bash
+          bash your head
+          strongly through the wall
+          
+    footer.foot
